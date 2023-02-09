@@ -5,7 +5,7 @@ import { CheckCircle } from "@mui/icons-material";
 import { demoProfilePicture } from "../utilis/constants";
 import { Box } from "@mui/system";
 
-export default function ChannelCard({ channelDetail }) {
+export default function ChannelCard({ channelDetail, marginTop, border }) {
   return (
     <Box
       sx={{
@@ -13,12 +13,13 @@ export default function ChannelCard({ channelDetail }) {
         // borderRadius: "20px",
         width: { md: "320px", xs: "356px" },
         height: "326px",
-        border: "#1e1e1e 1px solid",
+        border: border,
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
         margin: "auto",
+        marginTop: marginTop,
       }}
     >
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
