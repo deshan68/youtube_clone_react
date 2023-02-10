@@ -10,14 +10,14 @@ export default function ChannelDetail() {
   const [videos, setVideos] = useState([]);
   const { id } = useParams();
 
-  console.log(videos);
-
   useEffect(() => {
-    fetchFromAPI(`channels?part=snippet&id=${id}`).then((data) => {
+    fetchFromAPI(`channels?=snippet&id=${id}`).then((data) => {
       setChannelDetails(data?.items[0]);
     });
     fetchFromAPI(`search?channelId=${id}&part=snippet&order=date`).then(
-      (data) => setVideos(data?.items)
+      (data) => {
+        setVideos(data?.items);
+      }
     );
   }, [id]);
   return (

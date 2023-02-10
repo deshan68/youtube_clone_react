@@ -44,9 +44,9 @@ export default function ChannelCard({ channelDetail, marginTop, border }) {
             {channelDetail?.snippet?.title}
             <CheckCircle sx={{ fontSize: 14, color: "gray", ml: "5px" }} />
           </Typography>
-          {channelDetail?.statistics?.subcriberCount && (
+          {channelDetail?.statistics?.subscriberCount && (
             <Typography>
-              {parseInt(channelDetail?.statistics?.subcriberCount).toString()}{" "}
+              {parseInt(channelDetail?.statistics?.subscriberCount).toString()}{" "}
               Subcribers
             </Typography>
           )}
