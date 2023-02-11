@@ -14,7 +14,11 @@ export default function Feed() {
   }, [selectedCategory]);
 
   return (
-    <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
+    <Stack
+      sx={{
+        flexDirection: { sx: "column", md: "row" },
+      }}
+    >
       <Box
         sx={{
           height: { sx: "auto", md: "92vh" },
@@ -34,7 +38,17 @@ export default function Feed() {
           Copyright Desh 2023
         </Typography>
       </Box>
-      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+      <Box
+        p={2}
+        sx={{
+          overflowY: "auto",
+          height: "90vh",
+          flex: 2,
+          display: { sx: "flex", md: "block" },
+          alignItems: { sx: "center" },
+          justifyContent: { sx: "center" },
+        }}
+      >
         <Typography
           variant="h4"
           fontWeight={"bold"}
@@ -43,7 +57,9 @@ export default function Feed() {
         >
           {selectedCategory} <span style={{ color: "#f31503" }}>videos</span>
         </Typography>
-        <Videos videos={videos} />
+        <Box>
+          <Videos videos={videos} />
+        </Box>
       </Box>
     </Stack>
   );

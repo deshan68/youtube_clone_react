@@ -10,6 +10,11 @@ export default function Videos({ videos, direction }) {
       flexWrap="wrap"
       justifyContent={"start"}
       gap={2}
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
       {videos?.map((item, idx) => (
         <Box key={idx}>
